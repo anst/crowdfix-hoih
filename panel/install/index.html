@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WizardPro</title>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script> 
+<script type="text/javascript" src="assets/js/validate.js"></script> 
+<script type="text/javascript" src="assets/js/hoverIntent.js"></script> 
+<script type="text/javascript" src="assets/js/wizardPro.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){
+		var wizard = $("#wizard").wizardPro();
+		$("#ContactWizard").wizardPro();
+		//Remote Next/Prev Step 
+		//wizard.openstep(2);
+		
+		//Block interaction
+		//wizard.interactionBlock(1);
+	});
+</script>
+
+<link href="assets/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+	<div id="wizard" class="wizard-default-style js">
+		<ul class="steps">
+			<li>1. Intro</li>
+			<li>2. Database</li>
+			<li>3. Contest</li>
+			<li>4. Finish</li>
+		</ul>
+		<div class="step_content">
+			<div id="step-1" class="step one_column">
+				<div class="column_one">
+					<h3>Step 1 - Intro</h3>
+					<p><strong>Please have this information at hand:</strong></p>
+					<ol>
+						<li>Database name</li>
+						<li>Database username</li>
+						<li>Database password</li>
+						<li>Database host</li>
+					</ol>
+					
+					<p>This installation script will generate the config.php file in your root script directory. If it's unable to create it, then open config-manual.php in your favorite text editor and modify the changes yourself. After you have finished, rename it to config.php. Are you ready? </p>
+					<button class="next"><span>Continue</span></button>
+				</div>
+			</div>
+			<div id="step-2" class="step two_column">
+				<div class="column_one">
+					<h3>Step 2 - Database</h3>
+
+					<p>On the right side you should enter your database connection details. 
+					If you're not sure about these, contact your host. </p>
+				</div>
+				
+				<div class="column_two">
+					<form action="callback.php?step=2" class="defaultRequest" method="post">
+						<fieldset>
+							<p><label>Database Name</a></label>
+							<input type="text" name="dbname" class="required" value="contest" /></p>
+							
+							<p><label>User Name</label>
+							<input type="text" name="dbuser" value="root" /></p>
+							
+							<p><label>Password</label>
+							<input type="text" name="dbpass" value="password" /></p>
+							
+							<p><label>Database Host</label>
+							<input type="text" name="dbhost" value="localhost" /></p>
+						</fieldset>
+						
+						<fieldset>
+		     				 <p><label>&nbsp;</label>
+		     				 <button type="submit"><span>Next Step</span></button></p>
+		    			</fieldset>
+					</form>
+
+				</div>
+				
+			</div>
+			<div id="step-3" class="step two_column">
+				
+				<div class="column_one">
+					<h3>Step 3 - Contest</h3>
+					<p>Fill in the required information about your contest. You will be able to change these later in the administration panel.</p>
+				</div>
+				
+				<div class="column_two">
+					
+					<form action="callback.php?step=3" class="defaultRequest" method="post">
+						<fieldset>
+							<p><label>School Name</label>
+							<input type="text" name="schoolname" class="required" value="" /></p>
+							
+							<p><label>Contest Name</a></label>
+							<input type="text" name="contestname" class="required" value="" /></p>
+							
+							<p><label>Admin Username</a></label>
+							<input type="text" name="username" class="required password" value="" /></p>
+							
+							<p><label>Admin Password</label>
+							<input type="password" name="password" class="required" value="" /></p>
+						</fieldset>
+						<fieldset>
+		     				 <p><label>&nbsp;</label>
+		     				 <button type="submit"><span>Install WordPress</span></button></p>
+		    			</fieldset>
+					</form>
+				</div>
+			</div>
+			<div id="step-4" class="step one_column">
+				<div class="column_one">
+					<h3>Success!</h3>
+					<p>The Contest has been configured. Were you expecting more steps? Sorry to disappoint.</p>
+					<p><button><span>Admin Panel</span></button></p>
+				</div>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+TODO:
+-Implement Memcached
+-change color after twice validation √ Done
+-add outline: none for bootstrap - different issue may not be completed, ever.
+-ie only register form - probably use modernizr for the check
+-skipping a member in the register form works, FIX IT!
+
+RECOMMENDED THEME FOR LOGIN
+-default :: MOST RECOMMENDED
+-spacelab
+-simplex
+-journal
+-readable
+-united

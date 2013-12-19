@@ -1,0 +1,58 @@
+html, body {
+	height: 100%;
+}
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+#push, #footer {
+	height: 60px;
+}
+#footer {
+	background-color: #eeeeee;
+	opacity: 0.9;
+}
+img .profile, #search {
+	margin-top:5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+.container {
+	width: auto;
+	max-width: 960px;
+}
+.container .credit {
+	margin: 20px 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+@media (max-width: 767px) {
+	#footer {
+	  margin-left: -20px;
+	  margin-right: -20px;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+}
+body { 
+	background: url("/crowdfix/views/assets/images/images.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.row-fluid .hero-unit, .well, .navbar  {
+	opacity: 0.9;
+}
+.vote {
+	text-align: right;
+}
+.vote i {
+	font-weight: bold;
+	font-size: 18px;
+	color: #595959;
+}
